@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Меню ресторана</title>
+    <link rel="stylesheet" href="/menu/stylesM.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap");
+    </style>
+  </head>
+  <body>
+    <div id="loading-screen">
+      <img id="loading-logo" src="/assets/golpaslogo.png" alt="Гол+Пас Logo">
+  </div>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+      <div class="container px-4 px-lg-5">
+          <a class="navbar-brand" href="/index.html"><img class="logo" src="/assets/golpaslogo.png" alt="logo"></a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                  <li class="nav-item"><a class="nav-link" href="/glavnoe/index.html">Новости</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/menu/index.html">Меню</a>
+                  <li class="nav-item"><a class="nav-link" href="/contacts/index.html">Контакты</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/vacancy/index.html">Вакансии</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/about us/index.html">О нас</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+    <!-- Buttons Section -->
+    <section class="menu-buttons">
+      <a href="/menu/index.html" class="restaurant-menu">Restaurant Menu</a>
+      <a href="/menu/index1.html" class="bar-menu">Bar Menu</a>
+    </section>
+      <h1>Меню ресторана</h1>
+      <body>
+        <h1>Menu</h1>
+      
+        <!-- Filter form -->
+        <div class = "filter">
+          <label for="min-price">Min Price:</label>
+          <input type="number" id="min-price" value="0">
+          
+          <label for="max-price">Max Price:</label>
+          <input type="number" id="max-price" value="20000">
+          
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="all">All</option>
+            <option value="first course">First Course</option>
+            <option value="second course">Second Course</option>
+            <option value="dessert">Dessert</option>
+          </select>
+          
+          <button id="filter-button">Filter</button>
+        </div>
+      
+        <!-- Menu Display Section -->
+        <div id="menu" style="display: flex; flex-wrap: wrap;"></div>
+    <section class="menu">
+      <div class="menu-item">
+        <img
+          src="https://klin.japanesesushi.ru/wp-content/uploads/2021/06/fiaaagdpoua-1920-1080x720-1.jpg"
+          alt="Том Ям"
+        />
+        <div class="item-details">
+          <h3>Том Ям</h3>
+          <p>Острый тайский суп с креветками и грибами.</p>
+          <span class="price">4190 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img
+          src="https://avatars.dzeninfra.ru/get-zen_doc/1132604/pub_64e475b78d114068e8133225_64e476498d114068e814d0aa/scale_1200"
+          alt="Паста Карбонара"
+        />
+        <div class="item-details">
+          <h3>Паста Карбонара</h3>
+          <p>Паста с беконом, яйцом и сливками.</p>
+          <span class="price">3690 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://avatars.dzeninfra.ru/get-zen_doc/10928374/pub_64c5e7ac7f9f6474dfcab050_6502c061c8820c31923a6ceb/scale_1200" alt="Чизкейк" />
+        <div class="item-details">
+          <h3>Чизкейк</h3>
+          <p>Нежный чизкейк с клубничным соусом.</p>
+          <span class="price">1290 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://media.leverans.ru/product_images_inactive/moscow/shou-restoran-lalalend/cezar-s-kuricej-2.jpg" alt="Салат Цезарь" />
+        <div class="item-details">
+          <h3>Салат Цезарь</h3>
+          <p>Салат с курицей, гренками и пармезаном.</p>
+          <span class="price">3290 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://i0.wp.com/tashipizza.ru/wp-content/uploads/2024/01/Set-Filadelfiya.jpg?w=900&ssl=1" alt="Суши сет" />
+        <div class="item-details">
+          <h3>Суши сет</h3>
+          <p>Набор суши с лососем, тунцом и креветкой.</p>
+          <span class="price">12190 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://centspec.ru/uploads/413464-9c183c2f2550e70d5b6ad8165547800d.jpg" alt="Борщ" />
+        <div class="item-details">
+          <h3>Борщ</h3>
+          <p>Классический борщ с говядиной и сметаной.</p>
+          <span class="price">1990 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://pic.rutubelist.ru/video/e5/40/e54032a5e20cde8d9d90335f263d5004.jpg" alt="Стейк" />
+        <div class="item-details">
+          <h3>Стейк рибай</h3>
+          <p>Сочный стейк с овощами гриль.</p>
+          <span class="price">5690 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://static.tildacdn.com/tild3966-6430-4135-a139-353230313065/photo.jpg" alt="Блины с икрой" />
+        <div class="item-details">
+          <h3>Блины с икрой</h3>
+          <p>Тонкие блины с красной икрой.</p>
+          <span class="price">2190 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://main-cdn.sbermegamarket.ru/big2/hlr-system/961/341/631/125/191/9/100045244436b0.jpg" alt="Пицца Маргарита" />
+        <div class="item-details">
+          <h3>Пицца Маргарита</h3>
+          <p>Пицца с томатным соусом, сыром и базиликом.</p>
+          <span class="price">2590 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://cdn1.ozone.ru/s3/multimedia-m/6348760678.jpg" alt="Тирамису" />
+        <div class="item-details">
+          <h3>Тирамису</h3>
+          <p>Итальянский десерт с кофе и маскарпоне.</p>
+          <span class="price">1890 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://avatars.mds.yandex.net/get-altay/1363707/2a00000185a60df74c9d7838aa5e734c3d1f/XXL_height" alt="Удон с курицей" />
+        <div class="item-details">
+          <h3>Удон с курицей</h3>
+          <p>Японская лапша удон с курицей и овощами.</p>
+          <span class="price">2590 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://avatars.mds.yandex.net/i?id=ce13c4aa773cd4873bada6b6651bc03d_l-5492246-images-thumbs&n=13" alt="Морковный суп" />
+        <div class="item-details">
+          <h3>Морковный суп</h3>
+          <p>Крем-суп из моркови с имбирем и сливками.</p>
+          <span class="price">2890 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://main-cdn.sbermegamarket.ru/big1/hlr-system/150/188/174/991/745/100037029433b0.jpg" alt="Сэндвич с ветчиной" />
+        <div class="item-details">
+          <h3>Сэндвич с ветчиной</h3>
+          <p>Сэндвич с ветчиной, сыром и свежими овощами.</p>
+          <span class="price">1390 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="
+https://media.leverans.ru/product_images/tiumen/vkusnyi-roll/1690130262602a50537847a2.26755004.jpg" alt="Картофель фри" />
+        <div class="item-details">
+          <h3>Картофель фри</h3>
+          <p>Хрустящий картофель фри.</p>
+          <span class="price">990 тг</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://fs02.rchuv.ru/rchuv19/detsad13/news/2023/04/24/e0c2f0cb-711c-4d8c-a1a6-4a562d4d76ee/1670450281_9-podacha-blud-com.jpg" alt="Фруктовый салат" />
+        <div class="item-details">
+          <h3>Фруктовый салат</h3>
+          <p>Салат из свежих фруктов с мятой.</p>
+          <span class="price">2590 тг</span>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-light py-5">
+      <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Golpas Cafe. Made by Erasyl Serikbek, Arman Bezhanov, Adilzhan Medetbekuly</div></div>
+  </footer>
+          <!-- Bootstrap core JS-->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+          <!-- SimpleLightbox plugin JS-->
+          <!-- Core theme JS-->
+          <script src="/js/scripts.js"></script>
+          <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script>
+      const menuItems = [
+  { name: "Том Ям", price: 4190, category: "first course", image: "https://klin.japanesesushi.ru/wp-content/uploads/2021/06/fiaaagdpoua-1920-1080x720-1.jpg" },
+  { name: "Паста Карбонара", price: 3690, category: "second course", image: "https://avatars.dzeninfra.ru/get-zen_doc/1132604/pub_64e475b78d114068e8133225_64e476498d114068e814d0aa/scale_1200" },
+  { name: "Чизкейк", price: 1290, category: "dessert", image: "https://avatars.dzeninfra.ru/get-zen_doc/10928374/pub_64c5e7ac7f9f6474dfcab050_6502c061c8820c31923a6ceb/scale_1200" },
+  { name: "Салат Цезарь", price: 3290, category: "first course", image: "https://media.leverans.ru/product_images_inactive/moscow/shou-restoran-lalalend/cezar-s-kuricej-2.jpg" },
+  { name: "Стейк рибай", price: 5690, category: "second course", image: "https://pic.rutubelist.ru/video/e5/40/e54032a5e20cde8d9d90335f263d5004.jpg" },
+  { name: "Тирамису", price: 1890, category: "dessert", image: "https://cdn1.ozone.ru/s3/multimedia-m/6348760678.jpg" },
+];
+
+// Filter by price range
+function filterByPrice(minPrice, maxPrice) {
+  return menuItems.filter(item => item.price >= minPrice && item.price <= maxPrice);
+}
+
+// Filter by category
+function filterByCategory(items, category) {
+  if (category === 'all') {
+    return items; // Return all items if 'all' is selected
+  }
+  return items.filter(item => item.category === category);
+}
+
+// Display filtered items
+function displayItems(items) {
+  const menuSection = document.getElementById('menu');
+  menuSection.innerHTML = '';
+
+  if (items.length === 0) {
+    menuSection.innerHTML = '<p>No items match your filter criteria.</p>';
+    return;
+  }
+
+  items.forEach(item => {
+    const card = document.createElement('div');
+    card.style.border = '1px solid #ddd';
+    card.style.borderRadius = '8px';
+    card.style.padding = '16px';
+    card.style.margin = '10px';
+    card.style.width = '200px';
+    card.style.textAlign = 'center';
+    
+    card.innerHTML = `
+      <img src="${item.image}" alt="${item.name}" style="width: 100%; height: auto; border-radius: 8px;" />
+      <h3>${item.name}</h3>
+      <p>Price: ${item.price} тг</p>
+      <p>Category: ${item.category}</p>
+    `;
+    
+    menuSection.appendChild(card);
+  });
+}
+
+// Save filters to local storage
+function saveFilters() {
+  const minPrice = document.getElementById('min-price').value;
+  const maxPrice = document.getElementById('max-price').value;
+  const category = document.getElementById('category').value;
+
+  localStorage.setItem('minPrice', minPrice);
+  localStorage.setItem('maxPrice', maxPrice);
+  localStorage.setItem('category', category);
+}
+
+// Load filters from local storage
+function loadFilters() {
+  const minPrice = localStorage.getItem('minPrice') || '';
+  const maxPrice = localStorage.getItem('maxPrice') || '';
+  const category = localStorage.getItem('category') || 'all';
+
+  document.getElementById('min-price').value = minPrice;
+  document.getElementById('max-price').value = maxPrice;
+  document.getElementById('category').value = category;
+
+  // Apply the loaded filters
+  applyFilters();
+}
+
+// Apply filters to display filtered items
+function applyFilters() {
+  const minPrice = parseInt(document.getElementById('min-price').value) || 0;
+  const maxPrice = parseInt(document.getElementById('max-price').value) || Infinity;
+  const category = document.getElementById('category').value;
+
+  // Filter items based on price and category
+  let filteredItems = filterByPrice(minPrice, maxPrice);
+  filteredItems = filterByCategory(filteredItems, category);
+
+  // Display the filtered items
+  displayItems(filteredItems);
+}
+
+// Event listener for the filter button
+document.getElementById('filter-button').addEventListener('click', function() {
+  saveFilters();
+  applyFilters();
+});
+
+// Load filters and apply them on page load
+window.onload = loadFilters;
+
+
+
+
+
+    </script>
+  </body>
+</html>

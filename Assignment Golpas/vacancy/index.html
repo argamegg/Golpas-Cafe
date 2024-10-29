@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вакансии</title>
+    <link rel="stylesheet" href="/vacancy/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap");
+
+      .is-invalid {
+        border-color: #dc3545;
+      }
+
+      .invalid-feedback {
+        display: none;
+        color: #dc3545;
+      }
+
+      .is-invalid + .invalid-feedback {
+        display: block;
+      }
+
+      .muted-btn {
+        background-color: rgba(0, 123, 255, 0.5);
+        color: white;
+      }
+      .audio-hidden {
+        display: none;
+    }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light fixed-top py-3"
+      id="mainNav"
+    >
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="/index.html">
+          <img
+            class="logo"
+            src="/assets/golpaslogo.png"
+            alt="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto my-2 my-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/glavnoe/index.html"
+                >Новости</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/menu/index.html"
+                >Меню</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contacts/index.html"
+                >Контакты</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/vacancy/index.html"
+                >Вакансии</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about us/index.html"
+                >О нас</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<section class="container my-5 px-4">
+      <div class="row">
+        <div class="col-lg-8 mx-auto px-4">
+          <h1 class="mb-4 text-center">Вакансии</h1>
+          <p>
+            Если у вас есть вопросы и предложения или вам нужна информация о
+            вакансии, вы можете легко связаться с нами.
+          </p>
+          <form id="vacancyForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Имя</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Арман"
+                required
+              />
+              <div class="invalid-feedback">
+                Пожалуйста, введите корректное имя (минимум 2 буквы).
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="surname" class="form-label">Фамилия</label>
+              <input
+                type="text"
+                class="form-control"
+                id="surname"
+                placeholder="Арманов"
+                required
+              />
+              <div class="invalid-feedback">
+                Пожалуйста, введите корректную фамилию (минимум 2 буквы).
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Телефон</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                placeholder="+7"
+                required
+              />
+              <div class="invalid-feedback">
+                Пожалуйста, введите корректный номер телефона (формат: +7 и 10
+                цифр).
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="example@gmail.com"
+                required
+              />
+              <div class="invalid-feedback">
+                Пожалуйста, введите корректный email.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Вопрос</label>
+              <textarea
+                id="message"
+                class="form-control"
+                placeholder="Введите ваш вопрос"
+                rows="4"
+                required
+              ></textarea>
+              <div class="invalid-feedback">
+                Пожалуйста, введите ваш вопрос.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="surname" class="form-label">Резюме</label>
+              <div id="uploadFile_Loader" class="upload-zone">
+                <form class="form-upload" id="uploadForm" method="post" enctype="multipart/form-data">
+                  <div class="upload-zone_dragover">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" class="upload-loader__image">
+                      <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242M12 12v9"/>
+                      <path d="m16 16-4-4-4 4"/>
+                    </svg>
+                    <p>Перетащите файл резюме сюда</p>
+                  </div>
+                  <label class="form-upload__label" for="uploadForm_file">
+                    <span class="form-upload__title">Или нажми кнопку</span>
+                    <input class="form-upload__input" id="uploadForm_File" type="file" name="file_name" accept=".pdf" aria-describedby="hint">
+                  </label>
+                  <div class="form-upload__container">
+                    <span class="form-upload__hint" id="uploadForm_Hint"></span>
+                  </div>
+                </form>
+              </div>    
+              
+              <script>
+                const dropFileZone = document.querySelector(".upload-zone_dragover")
+                const statusText = document.getElementById("uploadForm_Hint")
+                const uploadInput = document.querySelector(".form-upload__input")
+
+                let setStatus = (text) => {
+                  statusText.textContent = text
+                }
+
+                const uploadUrl = "/unicorns";
+
+                ["dragover", "drop"].forEach(function(event) {
+                  document.addEventListener(event, function(evt) {
+                    evt.preventDefault()
+                    return false
+                  })
+                })
+
+                dropFileZone.addEventListener("dragenter", function() {
+                  dropFileZone.classList.add("_active")
+                })
+
+                dropFileZone.addEventListener("dragleave", function() {
+                  dropFileZone.classList.remove("_active")
+                })
+
+                dropFileZone.addEventListener("drop", function() {
+                  dropFileZone.classList.remove("_active")
+                  const file = event.dataTransfer?.files[0]
+                  if (!file) {
+                    return
+                  }
+
+                  if (file) {
+                    uploadInput.files = event.dataTransfer.files
+                    processingUploadFile()
+                  } else {
+                    setStatus("Можно загружать только изображения")
+                    return false
+                  }
+                })
+
+                uploadInput.addEventListener("change", (event) => {
+                  /*const file = uploadInput.files?.[0]
+                  if (file && file.type.startsWith("image/")) {
+                    processingUploadFile()
+                  } else {
+                    setStatus("Можно загружать только pdf")
+                    return false
+                  }*/
+                })
+
+                function processingUploadFile(file) {
+                  if (file) {
+                    const dropZoneData = new FormData()
+                    const xhr = new XMLHttpRequest()
+
+                    dropZoneData.append("file", file)
+
+                    xhr.open("POST", uploadUrl, true)
+
+                    xhr.send(dropZoneData)
+
+                    xhr.onload = function () {
+                      if (xhr.status == 200) {
+                        setStatus("Всё загружено")
+                      } else {
+                        setStatus("Oшибка загрузки")
+                      }
+                      HTMLElement.style.display = "none"
+                    }
+                  }
+                }
+
+                function processingDownloadFileWithFetch() {
+                  fetch(url, {
+                    method: "POST",
+                  }).then(async (res) => {
+                    const reader = res?.body?.getReader();
+                    while (true && reader) {
+                      const { value, done } = await reader?.read()
+                      console.log("value", value)
+                      if (done) break
+                      console.log("Received", value)
+                    }
+                  })
+                }
+
+              </script>
+            </div>
+
+            
+            <button type="submit" class="btn btn-primary w-100 button1" id="soundButton">
+              Отправить
+          </button>
+          <button type="button" id="reset-btn" class="btn btn-primary w-100 mt-2" id="soundButton">
+              Сбросить
+          </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-light py-5">
+      <div class="container px-4 px-lg-5">
+        <div class="small text-center text-muted">
+          Copyright &copy; 2023 - Golpas Cafe. Made by Erasyl Serikbek, Arman
+          Bezhanov, Adilzhan Medetbekuly
+        </div>
+      </div>
+    </footer>
+    <audio id="clickSound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+    <script>
+      const button = document.getElementById('soundButton');
+      const clickSound = document.getElementById('clickSound');
+      
+      button.addEventListener('click', () => {
+          clickSound.play();
+
+
+
+        const form = document.getElementById("vacancyForm");
+        const resetBtn = document.getElementById("reset-btn");
+
+        //form.addEventListener("submit", function (event) {
+        //  event.preventDefault(); // Остановить стандартное поведение формы
+          let isValid = true;
+
+          // Проверка полей
+          const inputs = form.querySelectorAll(".form-control");
+          inputs.forEach(function (input) {
+            if (!input.value) {
+              showError(input);
+              isValid = false;
+            } else {
+              removeError(input);
+            }
+         // });
+// Если все поля валидны
+          if (isValid) {
+            alert("Ваши данные отправлены");
+            changeSubmitButton();
+          }
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        
+      });
+
+        resetBtn.addEventListener("click", resetForm);
+
+        // Обработка клавиш
+        document.addEventListener("keydown", function (event) {
+          switch (event.key) {
+            case "Enter":
+              form.dispatchEvent(new Event("submit")); // Вызывает событие отправки формы
+              break;
+            case "Escape":
+              resetForm(); // Сбрасывает форму
+              break;
+            default:
+              break;
+          }
+        });
+
+        function showError(input) {
+          input.classList.add("is-invalid");
+          const errorMessage = input.nextElementSibling;
+          if (errorMessage) {
+            errorMessage.style.display = "block"; // Показываем сообщение об ошибке
+          }
+        }
+
+        function removeError(input) {
+          input.classList.remove("is-invalid");
+          const errorMessage = input.nextElementSibling;
+          if (errorMessage) {
+            errorMessage.style.display = "none"; // Скрываем сообщение об ошибке
+          }
+        }
+
+        function changeSubmitButton() {
+          const submitButton = form.querySelector(".button1");
+          submitButton.textContent = "Отправлено";
+          submitButton.classList.add("muted-btn");
+        }
+
+        function resetForm() {
+          form.reset(); // Сбрасываем поля формы
+          const inputs = form.querySelectorAll(".form-control");
+          inputs.forEach(removeError); // Убираем ошибки
+          const submitButton = form.querySelector(".button1");
+          submitButton.textContent = "Отправить"; // Возвращаем текст кнопки
+          submitButton.classList.remove("muted-btn"); // Возвращаем стиль кнопки
+        }
+      });
+    </script>
+  </body>
+</html>
